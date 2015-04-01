@@ -1,0 +1,94 @@
+########################################
+# CONTROL SIGNALS
+########################################
+NET "clock" 	LOC = "T9";
+NET "io06" 		LOC = "L14";
+NET "io05" 		LOC = "L13";
+
+########################################
+# CAMERA SIGNALS
+########################################
+NET "io10" LOC = "C8";
+NET "io14" LOC = "E7";
+NET "io13" LOC = "D6";
+NET "io04" LOC = "C9";
+NET "io03" LOC = "C7";
+NET "io02" LOC = "C6";
+NET "io12" LOC = "D7";
+NET "io11" LOC = "D5";
+NET "io01<0>" LOC = "B7";
+NET "io01<1>" LOC = "B5";
+NET "io01<2>" LOC = "A5";
+NET "io01<3>" LOC = "B4";
+NET "io01<4>" LOC = "A4";
+NET "io01<5>" LOC = "D10";
+NET "io01<6>" LOC = "A3";
+NET "io01<7>" LOC = "D8";
+
+########################################
+# VGA SIGNALS
+########################################
+NET "io08" LOC = "B13";		
+NET "io07" LOC = "A12";		
+
+NET "io09<0>" LOC = "B12";
+NET "io09<1>" LOC = "B10";
+NET "io09<2>" LOC = "A10";
+NET "io09<3>" LOC = "A8";
+NET "io09<4>" LOC = "A9";
+NET "io09<5>" LOC = "A7";
+NET "io09<6>" LOC = "B8";
+NET "io09<7>" LOC = "B6";
+
+########################################
+# DEBUGGING SIGNALS	LEDs
+########################################
+NET "led_out<0>" 	LOC = "K12";
+NET "led_out<1>" 	LOC = "P14";
+NET "led_out<2>" 	LOC = "L12";
+NET "led_out<3>" 	LOC = "N14";
+NET "led_out<4>" 	LOC = "P13";
+NET "led_out<5>" 	LOC = "N12";
+NET "led_out<6>" 	LOC = "P12";
+NET "led_out<7>" 	LOC = "P11";
+
+########################################
+# Seven-Segment Display control
+########################################
+NET "digit_out<0>" 	LOC = "D14";
+NET "digit_out<1>" 	LOC = "G14";
+NET "digit_out<2>" 	LOC = "F14";
+NET "digit_out<3>" 	LOC = "E13";
+
+########################################
+# Seven-Segment Display
+########################################
+NET "seg_out<0>" 	LOC = "P16";
+NET "seg_out<1>" 	LOC = "N16";
+NET "seg_out<2>" 	LOC = "F13";
+NET "seg_out<3>" 	LOC = "R16";
+NET "seg_out<4>" 	LOC = "P15";
+NET "seg_out<5>" 	LOC = "N15";
+NET "seg_out<6>" 	LOC = "G13";
+NET "seg_out<7>" 	LOC = "E14";
+
+########################################
+# Generic connector
+########################################
+NET "aux1<0>"       	LOC = "A13";
+
+########################################
+# Uart
+########################################
+NET "TX" 		LOC = "R13";
+NET "RX" 		LOC = "T13";
+
+########################################
+# TIME CONSTRAINTS
+########################################
+NET "clock" TNM_NET = "clock";
+TIMESPEC "TS_clock" = PERIOD "clock" 20 ns HIGH 50 %;
+NET "io04" TNM_NET = "io04";
+TIMESPEC "TS_io04" = PERIOD "io04" 20 ns HIGH 50 %;
+
+

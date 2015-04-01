@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;camera_sw_hist/src/negative.c&apos; to &apos;hist.c&apos;" description="Rename resource &apos;negative.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/negative.c" name="hist.c" stamp="1418212488691" updateReferences="true"/>
+</session>

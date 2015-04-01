@@ -1,0 +1,7 @@
+vhdl VGA_interface_v1_00_a C:\FPGA_leet\pcores\VGA_interface_v1_00_a/hdl/vhdl/ram_block2P.vhd
+vhdl VGA_interface_v1_00_a C:\FPGA_leet\pcores\VGA_interface_v1_00_a/hdl/vhdl/DistRAM_N.vhd
+vhdl VGA_interface_v1_00_a C:\FPGA_leet\pcores\VGA_interface_v1_00_a/hdl/vhdl/sync2.vhd
+vhdl VGA_interface_v1_00_a C:\FPGA_leet\pcores\VGA_interface_v1_00_a/hdl/vhdl/tovga.vhd
+vhdl VGA_interface_v1_00_a C:\FPGA_leet\pcores\VGA_interface_v1_00_a/hdl/vhdl/types.vhd
+vhdl VGA_interface_v1_00_a C:\FPGA_leet\pcores\VGA_interface_v1_00_a/hdl/vhdl/vga_interface.vhd
+vhdl work ../hdl/system_vga_interface_0_wrapper.vhd

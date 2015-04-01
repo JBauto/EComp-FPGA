@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project camera_sw_n ****
+
+make all 
+Building file: ../src/negative.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../running_leds/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v8.40.a -mno-xl-soft-mul -MMD -MP -MF"src/negative.d" -MT"src/negative.d" -o"src/negative.o" "../src/negative.c"
+Finished building: ../src/negative.c
+' '
+Building target: camera_sw_n.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../running_leds/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v8.40.a -mno-xl-soft-mul -o"camera_sw_n.elf"  ./src/negative.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: camera_sw_n.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size camera_sw_n.elf  |tee "camera_sw_n.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3890	    312	  11318	  15520	   3ca0	camera_sw_n.elf
+Finished building: camera_sw_n.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck camera_sw_n.elf -hw ../../FPGA_hw_platform/system.xml -pe microblaze_0  |tee "camera_sw_n.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../FPGA_hw_platform/system.xml -pe microblaze_0
+camera_sw_n.elf 
+
+ELF file	: camera_sw_n.elf
+elfcheck passed.
+Finished building: camera_sw_n.elf.elfcheck
+' '

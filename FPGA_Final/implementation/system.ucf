@@ -1,0 +1,63 @@
+########################################
+# CONTROL SIGNALS
+########################################
+
+
+NET "fpga_0_clk_1_sys_clk_pin" LOC = "T9";
+NET "fpga_0_rst_1_sys_rst_pin" LOC = "L14";
+NET "camera_interface_0_c13_pin" LOC = "L13";
+
+########################################
+# TIME CONSTRAINTS
+########################################
+
+NET fpga_0_clk_1_sys_clk_pin TNM_NET = sys_clk_pin;
+TIMESPEC "TS_sys_clk_pin" = PERIOD "sys_clk_pin" 20 ns HIGH 50 %;
+NET "camera_interface_0_c12_pin" TNM_NET = "camera_interface_0_c12_pin";
+TIMESPEC "TS_camera_interface_0_c12_pin" = PERIOD "camera_interface_0_c12_pin" 20 ns HIGH 50 %;
+
+########################################
+# LEDS
+########################################
+NET "running_leds_GPIO_IO_pin<0>"	LOC = "K12";
+NET "running_leds_GPIO_IO_pin<1>"	LOC = "P14";
+NET "running_leds_GPIO_IO_pin<2>"	LOC = "L12";
+NET "running_leds_GPIO_IO_pin<3>"	LOC = "N14";
+NET "running_leds_GPIO_IO_pin<4>"	LOC = "P13";
+NET "running_leds_GPIO_IO_pin<5>"	LOC = "N12";
+NET "running_leds_GPIO_IO_pin<6>"	LOC = "P12";
+NET "running_leds_GPIO_IO_pin<7>"	LOC = "P11";
+
+#######################################
+# CAMERA SIGNALS
+########################################
+NET "camera_interface_0_c04_pin" LOC = "D5";
+NET "camera_interface_0_c05_pin" LOC = "D7";
+NET "camera_interface_0_c06_pin" LOC = "C8";
+NET "camera_interface_0_c07_pin" LOC = "D6";
+NET "camera_interface_0_c08_pin" LOC = "E7";
+NET "camera_interface_0_c09_pin<0>" LOC = "B7";
+NET "camera_interface_0_c09_pin<1>" LOC = "B5";
+NET "camera_interface_0_c09_pin<2>" LOC = "A5";
+NET "camera_interface_0_c09_pin<3>" LOC = "B4";
+NET "camera_interface_0_c09_pin<4>" LOC = "A4";
+NET "camera_interface_0_c09_pin<5>" LOC = "D10";
+NET "camera_interface_0_c09_pin<6>" LOC = "A3";
+NET "camera_interface_0_c09_pin<7>" LOC = "D8";
+NET "camera_interface_0_c10_pin" LOC = "C6";
+NET "camera_interface_0_c11_pin" LOC = "C7";
+NET "camera_interface_0_c12_pin" LOC = "C9";
+
+########################################
+# VGA SIGNALS
+########################################
+NET "VGA_interface_0_v01_pin" LOC = "A12";
+NET "VGA_interface_0_v02_pin" LOC = "B13";
+NET "VGA_interface_0_v03_pin<0>" LOC = "B12";
+NET "VGA_interface_0_v03_pin<1>" LOC = "B10";
+NET "VGA_interface_0_v03_pin<2>" LOC = "A10";
+NET "VGA_interface_0_v03_pin<3>" LOC = "A8";
+NET "VGA_interface_0_v03_pin<4>" LOC = "A9";
+NET "VGA_interface_0_v03_pin<5>" LOC = "A7";
+NET "VGA_interface_0_v03_pin<6>" LOC = "B8";
+NET "VGA_interface_0_v03_pin<7>" LOC = "B6";

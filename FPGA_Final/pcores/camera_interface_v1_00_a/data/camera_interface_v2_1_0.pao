@@ -1,0 +1,36 @@
+##############################################################################
+##
+## ***************************************************************************
+## **                                                                       **
+## ** Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.            **
+## **                                                                       **
+## ** You may copy and modify these files for your own internal use solely  **
+## ** with Xilinx programmable logic devices and Xilinx EDK system or       **
+## ** create IP modules solely for Xilinx programmable logic devices and    **
+## ** Xilinx EDK system. No rights are granted to distribute any files      **
+## ** unless they are distributed in Xilinx programmable logic devices.     **
+## **                                                                       **
+## ***************************************************************************
+##
+##############################################################################
+## Filename:          D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\camera_interface_v1_00_a\data\camera_interface_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Nov 15 11:06:52 2006 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib camera_interface_v1_00_a ram_block3P vhdl
+lib camera_interface_v1_00_a QVGA_to_128x64 vhdl
+lib camera_interface_v1_00_a Shift_register vhdl
+lib camera_interface_v1_00_a camera_config vhdl
+lib camera_interface_v1_00_a camera_interface vhdl
+lib camera_interface_v1_00_a camera_sync vhdl
+lib camera_interface_v1_00_a gen_start vhdl
+lib camera_interface_v1_00_a gen_stop1 vhdl
+lib camera_interface_v1_00_a image_capture vhdl
+lib camera_interface_v1_00_a program_regs_OV9650 vhdl
+lib camera_interface_v1_00_a ram_block2P vhdl
+lib camera_interface_v1_00_a read_cycle vhdl
+lib camera_interface_v1_00_a read_data vhdl
+lib camera_interface_v1_00_a types vhdl
+lib camera_interface_v1_00_a write_cycle vhdl
+lib camera_interface_v1_00_a write_data vhdl

@@ -1,0 +1,619 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\FPGA_leet\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_vga_interface_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\FPGA_leet\pcores\" "d:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "d:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc3s1000ft256-4
+Output File Name                   : "../implementation/system_vga_interface_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_vga_interface_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/types.vhd" in Library VGA_interface_v1_00_a.
+Package <types> compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/ram_block2P.vhd" in Library VGA_interface_v1_00_a.
+Entity <ram_block2P> compiled.
+Entity <ram_block2P> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/DistRAM_N.vhd" in Library VGA_interface_v1_00_a.
+Entity <distram_n> compiled.
+Entity <distram_n> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/sync2.vhd" in Library VGA_interface_v1_00_a.
+Entity <SYNC2> compiled.
+Entity <SYNC2> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/tovga.vhd" in Library VGA_interface_v1_00_a.
+Entity <ToVGA> compiled.
+Entity <ToVGA> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/vga_interface.vhd" in Library VGA_interface_v1_00_a.
+Entity <vga_interface> compiled.
+Entity <vga_interface> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/hdl/system_vga_interface_0_wrapper.vhd" in Library work.
+Entity <system_vga_interface_0_wrapper> compiled.
+Entity <system_vga_interface_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system_vga_interface_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <vga_interface> in library <VGA_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <tovga> in library <VGA_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ram_block2p> in library <VGA_interface_v1_00_a> (architecture <Behavioral>) with generics.
+	asize = 13
+	dsize = 4
+
+Analyzing hierarchy for entity <distram_n> in library <VGA_interface_v1_00_a> (architecture <Behavioral>) with generics.
+	asize = 13
+	dsize = 4
+
+Analyzing hierarchy for entity <sync2> in library <VGA_interface_v1_00_a> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system_vga_interface_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <system_vga_interface_0_wrapper> analyzed. Unit <system_vga_interface_0_wrapper> generated.
+
+Analyzing Entity <vga_interface> in library <VGA_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <vga_interface> analyzed. Unit <vga_interface> generated.
+
+Analyzing Entity <tovga> in library <VGA_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <tovga> analyzed. Unit <tovga> generated.
+
+Analyzing generic Entity <ram_block2p> in library <VGA_interface_v1_00_a> (Architecture <Behavioral>).
+	asize = 13
+	dsize = 4
+Entity <ram_block2p> analyzed. Unit <ram_block2p> generated.
+
+Analyzing generic Entity <distram_n> in library <VGA_interface_v1_00_a> (Architecture <Behavioral>).
+	asize = 13
+	dsize = 4
+    Set property "ram_style = distributed" for signal <RAM>.
+Entity <distram_n> analyzed. Unit <distram_n> generated.
+
+Analyzing Entity <sync2> in library <VGA_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <sync2> analyzed. Unit <sync2> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ram_block2p>.
+    Related source file is "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/ram_block2P.vhd".
+    Found 8192x4-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 13-bit register for signal <read_dpra>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  13 D-type flip-flop(s).
+Unit <ram_block2p> synthesized.
+
+
+Synthesizing Unit <distram_n>.
+    Related source file is "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/DistRAM_N.vhd".
+WARNING:Xst:1780 - Signal <read_dpra> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8192x4-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 4-bit register for signal <DOB>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 D-type flip-flop(s).
+Unit <distram_n> synthesized.
+
+
+Synthesizing Unit <sync2>.
+    Related source file is "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/sync2.vhd".
+    Found 10-bit up counter for signal <hcnt>.
+    Found 11-bit comparator less for signal <hcnt$cmp_lt0000> created at line 47.
+    Found 11-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 60.
+    Found 11-bit comparator less for signal <hsync$cmp_lt0000> created at line 60.
+    Found 11-bit comparator less for signal <Pblank$cmp_lt0000> created at line 102.
+    Found 11-bit comparator less for signal <Pblank$cmp_lt0001> created at line 104.
+    Found 10-bit up counter for signal <vcnt>.
+    Found 11-bit comparator less for signal <vcnt$cmp_lt0000> created at line 75.
+    Found 11-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 89.
+    Found 11-bit comparator less for signal <vsync$cmp_lt0000> created at line 89.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   8 Comparator(s).
+Unit <sync2> synthesized.
+
+
+Synthesizing Unit <tovga>.
+    Related source file is "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/tovga.vhd".
+WARNING:Xst:646 - Signal <v_vect<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <h_vect<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <clk2>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <tovga> synthesized.
+
+
+Synthesizing Unit <vga_interface>.
+    Related source file is "C:/FPGA_leet/pcores/VGA_interface_v1_00_a/hdl/vhdl/vga_interface.vhd".
+WARNING:Xst:647 - Input <FSL_S_Data<0:23>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FSL_S_Control> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | v07                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | read1                                          |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <FSL_S_Read>.
+    Found 13-bit register for signal <addr_A>.
+    Found 13-bit adder for signal <nxt_addr_A$addsub0000> created at line 126.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <vga_interface> synthesized.
+
+
+Synthesizing Unit <system_vga_interface_0_wrapper>.
+    Related source file is "C:/FPGA_leet/hdl/system_vga_interface_0_wrapper.vhd".
+Unit <system_vga_interface_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8192x4-bit dual-port RAM                              : 2
+# Adders/Subtractors                                   : 1
+ 13-bit adder                                          : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 13-bit register                                       : 2
+ 4-bit register                                        : 1
+# Comparators                                          : 8
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <VGA_interface_0/CS/FSM> on signal <CS[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ read1 | 01
+ read2 | 11
+ read3 | 10
+-------------------
+
+Synthesizing (advanced) Unit <distram_n>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_RAM>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 4-bit                   |          |
+    |     clkA           | connected to signal <CLKA>          | rise     |
+    |     weA            | connected to signal <WEA>           | high     |
+    |     addrA          | connected to signal <ADDRA>         |          |
+    |     diA            | connected to signal <DIA>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 4-bit                   |          |
+    |     addrB          | connected to signal <ADDRB>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <distram_n> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram_block2p>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_dpra>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 4-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLKA>          | rise     |
+    |     weA            | connected to signal <WEA>           | high     |
+    |     addrA          | connected to signal <ADDRA>         |          |
+    |     diA            | connected to signal <DIA>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 4-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLKB>          | rise     |
+    |     addrB          | connected to signal <ADDRB>         |          |
+    |     doB            | connected to signal <DOB>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ram_block2p> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 2
+ 8192x4-bit dual-port block RAM                        : 1
+ 8192x4-bit dual-port distributed RAM                  : 1
+# Adders/Subtractors                                   : 1
+ 13-bit adder                                          : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Comparators                                          : 8
+ 11-bit comparator greatequal                          : 2
+ 11-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_vga_interface_0_wrapper> ...
+
+Optimizing unit <sync2> ...
+
+Optimizing unit <tovga> ...
+
+Optimizing unit <vga_interface> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop VGA_interface_0/U1/U2/hcnt_1 has been replicated 5 time(s)
+FlipFlop VGA_interface_0/U1/U2/hcnt_2 has been replicated 5 time(s)
+FlipFlop VGA_interface_0/U1/U2/hcnt_3 has been replicated 5 time(s)
+FlipFlop VGA_interface_0/U1/U2/hcnt_4 has been replicated 6 time(s)
+FlipFlop VGA_interface_0/U1/U2/hcnt_5 has been replicated 3 time(s)
+FlipFlop VGA_interface_0/U1/U2/hcnt_6 has been replicated 1 time(s)
+FlipFlop VGA_interface_0/addr_A_0 has been replicated 14 time(s)
+FlipFlop VGA_interface_0/addr_A_1 has been replicated 13 time(s)
+FlipFlop VGA_interface_0/addr_A_2 has been replicated 13 time(s)
+FlipFlop VGA_interface_0/addr_A_3 has been replicated 13 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 119
+ Flip-Flops                                            : 119
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_vga_interface_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 70
+
+Cell Usage :
+# BELS                             : 2808
+#      GND                         : 3
+#      INV                         : 2
+#      LUT1                        : 12
+#      LUT2                        : 12
+#      LUT2_D                      : 4
+#      LUT2_L                      : 1
+#      LUT3                        : 1574
+#      LUT3_D                      : 1
+#      LUT4                        : 97
+#      LUT4_D                      : 47
+#      LUT4_L                      : 3
+#      MUXCY                       : 30
+#      MUXF5                       : 528
+#      MUXF6                       : 264
+#      MUXF7                       : 132
+#      MUXF8                       : 64
+#      VCC                         : 1
+#      XORCY                       : 33
+# FlipFlops/Latches                : 119
+#      FD                          : 4
+#      FDC                         : 104
+#      FDCE                        : 10
+#      FDP                         : 1
+# RAMS                             : 2050
+#      RAM16X1D                    : 2048
+#      RAMB16                      : 2
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                      917  out of   7680    11%  
+ Number of Slice Flip Flops:            119  out of  15360     0%  
+ Number of 4 input LUTs:               5849  out of  15360    38%  
+    Number used as logic:              1753
+    Number used as RAMs:               4096
+ Number of IOs:                          70
+ Number of bonded IOBs:                   0  out of    173     0%  
+ Number of BRAMs:                         2  out of     24     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)        | Load  |
+-----------------------------------+------------------------------+-------+
+FSL_S_Clk                          | NONE(VGA_interface_0/U1/clk2)| 2124  |
+VGA_interface_0/U1/clk21           | BUFG                         | 45    |
+-----------------------------------+------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+v07                                | NONE                   | 115   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.934ns (Maximum Frequency: 100.667MHz)
+   Minimum input arrival time before clock: 5.955ns
+   Maximum output required time after clock: 7.431ns
+   Maximum combinational path delay: 4.012ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_S_Clk'
+  Clock period: 9.934ns (frequency: 100.667MHz)
+  Total number of paths / destination ports: 34226 / 10340
+-------------------------------------------------------------------------
+Delay:               9.934ns (Levels of Logic = 3)
+  Source:            VGA_interface_0/addr_A_1 (FF)
+  Destination:       VGA_interface_0/CS_FSM_FFd1 (FF)
+  Source Clock:      FSL_S_Clk rising
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: VGA_interface_0/addr_A_1 to VGA_interface_0/CS_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            487   0.720   4.486  VGA_interface_0/addr_A_1 (VGA_interface_0/addr_A_1)
+     LUT4:I3->O            1   0.551   0.827  VGA_interface_0/CS_FSM_FFd1-In154 (VGA_interface_0/CS_FSM_FFd1-In154)
+     LUT4_D:I3->O         61   0.551   2.045  VGA_interface_0/CS_FSM_FFd1-In177 (VGA_interface_0/N1)
+     LUT4:I3->O            2   0.551   0.000  VGA_interface_0/nxt_addr_A<1>1 (VGA_interface_0/nxt_addr_A<1>)
+     FDC:D                     0.203          VGA_interface_0/addr_A_1
+    ----------------------------------------
+    Total                      9.934ns (2.576ns logic, 7.358ns route)
+                                       (25.9% logic, 74.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA_interface_0/U1/clk21'
+  Clock period: 8.218ns (frequency: 121.681MHz)
+  Total number of paths / destination ports: 2471 / 55
+-------------------------------------------------------------------------
+Delay:               8.218ns (Levels of Logic = 12)
+  Source:            VGA_interface_0/U1/U2/hcnt_6 (FF)
+  Destination:       VGA_interface_0/U1/U2/hcnt_9 (FF)
+  Source Clock:      VGA_interface_0/U1/clk21 rising
+  Destination Clock: VGA_interface_0/U1/clk21 rising
+
+  Data Path: VGA_interface_0/U1/U2/hcnt_6 to VGA_interface_0/U1/U2/hcnt_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            260   0.720   3.185  VGA_interface_0/U1/U2/hcnt_6 (VGA_interface_0/U1/U2/hcnt_6)
+     LUT4:I3->O            7   0.551   1.092  VGA_interface_0/U1/U2/hcnt_not0001_SW0 (N14)
+     LUT4:I3->O            1   0.551   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_lut<0> (VGA_interface_0/U1/U2/Mcount_hcnt_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<0> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<1> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<2> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<3> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<4> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<5> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<6> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<7> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<7>)
+     MUXCY:CI->O           0   0.064   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_cy<8> (VGA_interface_0/U1/U2/Mcount_hcnt_cy<8>)
+     XORCY:CI->O           1   0.904   0.000  VGA_interface_0/U1/U2/Mcount_hcnt_xor<9> (VGA_interface_0/U1/U2/Mcount_hcnt9)
+     FDC:D                     0.203          VGA_interface_0/U1/U2/hcnt_9
+    ----------------------------------------
+    Total                      8.218ns (3.941ns logic, 4.277ns route)
+                                       (48.0% logic, 52.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 4103 / 4103
+-------------------------------------------------------------------------
+Offset:              5.955ns (Levels of Logic = 2)
+  Source:            FSL_S_Exists (PAD)
+  Destination:       VGA_interface_0/U1/UMd/Mram_RAM1 (RAM)
+  Destination Clock: FSL_S_Clk rising
+
+  Data Path: FSL_S_Exists to VGA_interface_0/U1/UMd/Mram_RAM1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I0->O          260   0.551   3.227  VGA_interface_0/CS_FSM_FFd1-In21_1 (VGA_interface_0/CS_FSM_FFd1-In21_1)
+     LUT3:I2->O            4   0.551   0.917  VGA_interface_0/U1/write_ctrl (VGA_interface_0/U1/write_ctrl)
+     RAM16X1D:WE               0.370          VGA_interface_0/U1/UMd/Mram_RAM1
+    ----------------------------------------
+    Total                      5.955ns (1.811ns logic, 4.144ns route)
+                                       (30.4% logic, 69.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_S_Clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              2.140ns (Levels of Logic = 1)
+  Source:            VGA_interface_0/U1/UMd/DOB_3 (FF)
+  Destination:       v03<3> (PAD)
+  Source Clock:      FSL_S_Clk rising
+
+  Data Path: VGA_interface_0/U1/UMd/DOB_3 to v03<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.720   0.869  VGA_interface_0/U1/UMd/DOB_3 (VGA_interface_0/U1/UMd/DOB_3)
+     LUT4:I2->O            0   0.551   0.000  VGA_interface_0/U1/Dout<3>1 (v03<3>)
+    ----------------------------------------
+    Total                      2.140ns (1.271ns logic, 0.869ns route)
+                                       (59.4% logic, 40.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_interface_0/U1/clk21'
+  Total number of paths / destination ports: 100 / 23
+-------------------------------------------------------------------------
+Offset:              7.431ns (Levels of Logic = 4)
+  Source:            VGA_interface_0/U1/U2/vcnt_8 (FF)
+  Destination:       v03<7> (PAD)
+  Source Clock:      VGA_interface_0/U1/clk21 rising
+
+  Data Path: VGA_interface_0/U1/U2/vcnt_8 to v03<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            12   0.720   1.313  VGA_interface_0/U1/U2/vcnt_8 (VGA_interface_0/U1/U2/vcnt_8)
+     LUT4:I1->O            2   0.551   0.903  VGA_interface_0/U1/U2/vsync11 (VGA_interface_0/U1/U2/N7)
+     LUT4:I3->O            1   0.551   0.869  VGA_interface_0/U1/Dout_and00001_SW0 (N8)
+     LUT3:I2->O            8   0.551   1.422  VGA_interface_0/U1/Dout_and00001 (VGA_interface_0/U1/N682)
+     LUT4:I0->O            0   0.551   0.000  VGA_interface_0/U1/Dout<7>1 (v03<7>)
+    ----------------------------------------
+    Total                      7.431ns (2.924ns logic, 4.507ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 19 / 11
+-------------------------------------------------------------------------
+Delay:               4.012ns (Levels of Logic = 3)
+  Source:            v07 (PAD)
+  Destination:       v03<7> (PAD)
+
+  Data Path: v07 to v03<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I2->O            1   0.551   0.869  VGA_interface_0/U1/Dout_and00001_SW0 (N8)
+     LUT3:I2->O            8   0.551   1.422  VGA_interface_0/U1/Dout_and00001 (VGA_interface_0/U1/N682)
+     LUT4:I0->O            0   0.551   0.000  VGA_interface_0/U1/Dout<7>1 (v03<7>)
+    ----------------------------------------
+    Total                      4.012ns (1.721ns logic, 2.291ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.25 secs
+ 
+--> 
+
+Total memory usage is 343296 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

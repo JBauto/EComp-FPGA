@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;camera_sw_e/src/negative.c&apos; to &apos;emboss.c&apos;" description="Rename resource &apos;negative.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/negative.c" name="emboss.c" stamp="1418228129699" updateReferences="true"/>
+</session>

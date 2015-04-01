@@ -1,0 +1,16 @@
+
+**** Build of configuration Debug for project camera_sw_emboss ****
+
+make all 
+Building file: ../src/emboss.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../running_leds/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v8.40.a -mno-xl-soft-mul -MMD -MP -MF"src/emboss.d" -MT"src/emboss.d" -o"src/emboss.o" "../src/emboss.c"
+Finished building: ../src/emboss.c
+' '
+Building target: camera_sw_emboss.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../running_leds/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v8.40.a -mno-xl-soft-mul -o"camera_sw_emboss.elf"  ./src/emboss.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/14.2/ise_ds/edk/gnu/microblaze/nt64/bin/../lib/gcc/microblaze-xilinx-elf/4.6.2/../../../../microblaze-xilinx-elf/bin/ld.exe: camera_sw_emboss.elf section `.bss' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+d:/xilinx/14.2/ise_ds/edk/gnu/microblaze/nt64/bin/../lib/gcc/microblaze-xilinx-elf/4.6.2/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 14400 bytes
+collect2: ld returned 1 exit status
+make: ** [camera_sw_emboss.elf] Erro 1

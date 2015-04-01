@@ -1,0 +1,442 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\FPGA_leet\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_camera2mb_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\FPGA_leet\pcores\" "d:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "d:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc3s1000ft256-4
+Output File Name                   : "../implementation/system_camera2mb_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_camera2mb_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_srlfifo.vhd" in Library fsl_v20_v2_11_e.
+Entity <SRL_FIFO> compiled.
+Entity <SRL_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_sync_dpram.vhd" in Library fsl_v20_v2_11_e.
+Entity <Sync_DPRAM> compiled.
+Entity <Sync_DPRAM> (Architecture <syn>) compiled.
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_sync_bram.vhd" in Library fsl_v20_v2_11_e.
+Entity <Sync_BRAM> compiled.
+Entity <Sync_BRAM> (Architecture <syn>) compiled.
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/sync_fifo.vhd" in Library fsl_v20_v2_11_e.
+Entity <Sync_FIFO> compiled.
+Entity <Sync_FIFO> (Architecture <VHDL_RTL>) compiled.
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/async_fifo.vhd" in Library fsl_v20_v2_11_e.
+Entity <Async_FIFO> compiled.
+Entity <Async_FIFO> (Architecture <VHDL_RTL>) compiled.
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/async_fifo_bram.vhd" in Library fsl_v20_v2_11_e.
+Entity <Async_FIFO_BRAM> compiled.
+Entity <Async_FIFO_BRAM> (Architecture <IMP>) compiled.
+Compiling vhdl file "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/fsl_v20.vhd" in Library fsl_v20_v2_11_e.
+Entity <fsl_v20> compiled.
+Entity <fsl_v20> (Architecture <IMP>) compiled.
+Compiling vhdl file "C:/FPGA_leet/hdl/system_camera2mb_wrapper.vhd" in Library work.
+Entity <system_camera2mb_wrapper> compiled.
+Entity <system_camera2mb_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system_camera2mb_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <fsl_v20> in library <fsl_v20_v2_11_e> (architecture <IMP>) with generics.
+	C_ASYNC_CLKS = 0
+	C_EXT_RESET_HIGH = 1
+	C_FSL_DEPTH = 16
+	C_FSL_DWIDTH = 32
+	C_IMPL_STYLE = 0
+	C_READ_CLOCK_PERIOD = 0
+	C_USE_CONTROL = 1
+
+Analyzing hierarchy for entity <Sync_FIFO> in library <fsl_v20_v2_11_e> (architecture <VHDL_RTL>) with generics.
+	C_IMPL_STYLE = 0
+	MemSize = 16
+	WordSize = 33
+
+Analyzing hierarchy for entity <SRL_FIFO> in library <fsl_v20_v2_11_e> (architecture <IMP>) with generics.
+	C_DATA_BITS = 33
+	C_DEPTH = 16
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system_camera2mb_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <system_camera2mb_wrapper> analyzed. Unit <system_camera2mb_wrapper> generated.
+
+Analyzing generic Entity <fsl_v20> in library <fsl_v20_v2_11_e> (Architecture <IMP>).
+	C_ASYNC_CLKS = 0
+	C_EXT_RESET_HIGH = 1
+	C_FSL_DEPTH = 16
+	C_FSL_DWIDTH = 32
+	C_IMPL_STYLE = 0
+	C_READ_CLOCK_PERIOD = 0
+	C_USE_CONTROL = 1
+    Set user-defined property "INIT =  FFFF" for instance <POR_SRL_I> in unit <fsl_v20>.
+    Set user-defined property "INIT =  1" for instance <POR_FF_I> in unit <fsl_v20>.
+Entity <fsl_v20> analyzed. Unit <fsl_v20> generated.
+
+Analyzing generic Entity <Sync_FIFO> in library <fsl_v20_v2_11_e> (Architecture <VHDL_RTL>).
+	C_IMPL_STYLE = 0
+	MemSize = 16
+	WordSize = 33
+Entity <Sync_FIFO> analyzed. Unit <Sync_FIFO> generated.
+
+Analyzing generic Entity <SRL_FIFO> in library <fsl_v20_v2_11_e> (Architecture <IMP>).
+	C_DATA_BITS = 33
+	C_DEPTH = 16
+    Set user-defined property "INIT =  0" for instance <FDRE_I1> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0" for instance <Addr_Counters[0].FDRE_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0" for instance <Addr_Counters[1].FDRE_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0" for instance <Addr_Counters[2].FDRE_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0" for instance <Addr_Counters[3].FDRE_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[0].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[1].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[2].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[3].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[4].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[5].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[6].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[7].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[8].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[9].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[10].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[11].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[12].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[13].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[14].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[15].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[16].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[17].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[18].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[19].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[20].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[21].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[22].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[23].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[24].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[25].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[26].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[27].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[28].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[29].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[30].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[31].SRL16E_I> in unit <SRL_FIFO>.
+    Set user-defined property "INIT =  0000" for instance <FIFO_RAM[32].SRL16E_I> in unit <SRL_FIFO>.
+Entity <SRL_FIFO> analyzed. Unit <SRL_FIFO> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SRL_FIFO>.
+    Related source file is "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/gen_srlfifo.vhd".
+    Found 1-bit register for signal <data_Exists_I>.
+    Found 1-bit xor2 for signal <hsum_A_0$xor0000> created at line 176.
+    Found 1-bit xor2 for signal <hsum_A_1$xor0000> created at line 176.
+    Found 1-bit xor2 for signal <hsum_A_2$xor0000> created at line 176.
+    Found 1-bit xor2 for signal <hsum_A_3$xor0000> created at line 176.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <SRL_FIFO> synthesized.
+
+
+Synthesizing Unit <Sync_FIFO>.
+    Related source file is "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/sync_fifo.vhd".
+WARNING:Xst:1780 - Signal <read_bram_enable> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Write_Address> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Read_Address> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DataOut_BRAM> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <Sync_FIFO> synthesized.
+
+
+Synthesizing Unit <fsl_v20>.
+    Related source file is "d:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fsl_v20_v2_11_e/hdl/vhdl/fsl_v20.vhd".
+WARNING:Xst:647 - Input <FSL_M_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FSL_S_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <fsl_v20> synthesized.
+
+
+Synthesizing Unit <system_camera2mb_wrapper>.
+    Related source file is "C:/FPGA_leet/hdl/system_camera2mb_wrapper.vhd".
+Unit <system_camera2mb_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_camera2mb_wrapper> ...
+
+Optimizing unit <SRL_FIFO> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_camera2mb_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 78
+
+Cell Usage :
+# BELS                             : 19
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      LUT4                        : 6
+#      LUT4_D                      : 1
+#      MUXCY_L                     : 3
+#      VCC                         : 1
+#      XORCY                       : 4
+# FlipFlops/Latches                : 7
+#      FDR                         : 1
+#      FDRE                        : 5
+#      FDS                         : 1
+# Shift Registers                  : 34
+#      SRL16                       : 1
+#      SRL16E                      : 33
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                       22  out of   7680     0%  
+ Number of Slice Flip Flops:              7  out of  15360     0%  
+ Number of 4 input LUTs:                 44  out of  15360     0%  
+    Number used as logic:                10
+    Number used as Shift registers:      34
+ Number of IOs:                          78
+ Number of bonded IOBs:                   0  out of    173     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+FSL_Clk                            | NONE(camera2mb/POR_FF_I)| 41    |
+-----------------------------------+-------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.204ns (Maximum Frequency: 121.888MHz)
+   Minimum input arrival time before clock: 5.549ns
+   Maximum output required time after clock: 4.886ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_Clk'
+  Clock period: 8.204ns (frequency: 121.888MHz)
+  Total number of paths / destination ports: 302 / 183
+-------------------------------------------------------------------------
+Delay:               8.204ns (Levels of Logic = 5)
+  Source:            camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[3].FDRE_I (FF)
+  Destination:       camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FDRE_I1 (FF)
+  Source Clock:      FSL_Clk rising
+  Destination Clock: FSL_Clk rising
+
+  Data Path: camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[3].FDRE_I to camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FDRE_I1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            35   0.720   2.209  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[3].FDRE_I (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr<3>)
+     LUT4_D:I0->O          4   0.551   0.943  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/buffer_Empty_cmp_eq00001 (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/buffer_Empty)
+     LUT4:I3->O            1   0.551   0.000  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/hsum_A_0_and00001 (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/hsum_A<0>)
+     MUXCY_L:S->LO         1   0.500   0.000  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[0].Used_MuxCY.MUXCY_L_I (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/addr_cy<1>)
+     XORCY:CI->O           2   0.904   1.072  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[1].XORCY_I (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/sum_A<1>)
+     LUT4:I1->O            1   0.551   0.000  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/buffer_full_early_cmp_eq00001 (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/buffer_full_early)
+     FDRE:D                    0.203          camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FDRE_I1
+    ----------------------------------------
+    Total                      8.204ns (3.980ns logic, 4.224ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_Clk'
+  Total number of paths / destination ports: 158 / 73
+-------------------------------------------------------------------------
+Offset:              5.549ns (Levels of Logic = 4)
+  Source:            FSL_S_Read (PAD)
+  Destination:       camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FDRE_I1 (FF)
+  Destination Clock: FSL_Clk rising
+
+  Data Path: FSL_S_Read to camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FDRE_I1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I0->O           34   0.551   1.865  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/valid_Write1 (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/valid_Write)
+     MUXCY_L:CI->LO        1   0.064   0.000  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[0].Used_MuxCY.MUXCY_L_I (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/addr_cy<1>)
+     XORCY:CI->O           2   0.904   1.072  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/Addr_Counters[1].XORCY_I (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/sum_A<1>)
+     LUT4:I1->O            1   0.551   0.000  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/buffer_full_early_cmp_eq00001 (camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/buffer_full_early)
+     FDRE:D                    0.203          camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FDRE_I1
+    ----------------------------------------
+    Total                      5.549ns (2.612ns logic, 2.937ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_Clk'
+  Total number of paths / destination ports: 41 / 39
+-------------------------------------------------------------------------
+Offset:              4.886ns (Levels of Logic = 1)
+  Source:            camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FIFO_RAM[32].SRL16E_I (FF)
+  Destination:       FSL_Control_IRQ (PAD)
+  Source Clock:      FSL_Clk rising
+
+  Data Path: camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FIFO_RAM[32].SRL16E_I to FSL_Control_IRQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         1   3.195   1.140  camera2mb/Using_FIFO.Sync_FIFO_Gen.Use_Control.Sync_FIFO_I1/Sync_FIFO_I.srl_fifo_i.FSL_FIFO/FIFO_RAM[32].SRL16E_I (FSL_S_Control)
+     LUT2:I0->O            0   0.551   0.000  camera2mb/FSL_Control_IRQ1 (FSL_Control_IRQ)
+    ----------------------------------------
+    Total                      4.886ns (3.746ns logic, 1.140ns route)
+                                       (76.7% logic, 23.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.21 secs
+ 
+--> 
+
+Total memory usage is 262080 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

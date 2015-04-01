@@ -1,0 +1,13 @@
+#-- Synopsys, Inc.
+#-- Version D-2009.12
+#-- Project file /homelocal/sfan/ongoing/EC_Lab_Project/final_versions/camera_periferals/VGA_interface_v1_00_a/hdl/vhdl/proj_1.prd
+#-- Written on Fri Aug 20 17:35:39 2010
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

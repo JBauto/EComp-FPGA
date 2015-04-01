@@ -1,0 +1,26 @@
+##############################################################################
+##
+## ***************************************************************************
+## **                                                                       **
+## ** Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.            **
+## **                                                                       **
+## ** You may copy and modify these files for your own internal use solely  **
+## ** with Xilinx programmable logic devices and Xilinx EDK system or       **
+## ** create IP modules solely for Xilinx programmable logic devices and    **
+## ** Xilinx EDK system. No rights are granted to distribute any files      **
+## ** unless they are distributed in Xilinx programmable logic devices.     **
+## **                                                                       **
+## ***************************************************************************
+##
+##############################################################################
+## Filename:          D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface_v1_00_a\data\VGA_interface_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Nov 15 12:00:37 2006 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib VGA_interface_v1_00_a ram_block2P vhdl
+lib VGA_interface_v1_00_a DistRAM_N vhdl
+lib VGA_interface_v1_00_a sync2 vhdl
+lib VGA_interface_v1_00_a tovga vhdl
+lib VGA_interface_v1_00_a types vhdl
+lib VGA_interface_v1_00_a vga_interface vhdl

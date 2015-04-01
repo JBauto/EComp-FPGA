@@ -1,0 +1,18 @@
+C:\FPGA_leet\implementation\system.ngc 1418819059
+C:/FPGA_leet/implementation/system_microblaze_0_wrapper.ngc 1418818965
+C:/FPGA_leet/implementation/system_mb_plb_wrapper.ngc 1418818864
+C:/FPGA_leet/implementation/system_ilmb_wrapper.ngc 1418818967
+C:/FPGA_leet/implementation/system_dlmb_wrapper.ngc 1418818970
+C:/FPGA_leet/implementation/system_dlmb_cntlr_wrapper.ngc 1418818875
+C:/FPGA_leet/implementation/system_ilmb_cntlr_wrapper.ngc 1418818879
+C:/FPGA_leet/implementation/system_lmb_bram_wrapper.ngc 1418818884
+C:/FPGA_leet/implementation/system_sclk_wrapper.ngc 1418818973
+C:/FPGA_leet/implementation/system_mdm_0_wrapper.ngc 1418818895
+C:/FPGA_leet/implementation/system_proc_sys_reset_0_wrapper.ngc 1418818899
+C:/FPGA_leet/implementation/system_xps_gpio_0_wrapper.ngc 1418818908
+C:/FPGA_leet/implementation/system_running_leds_wrapper.ngc 1418818917
+C:/FPGA_leet/implementation/system_vga_interface_0_wrapper.ngc 1418818948
+C:/FPGA_leet/implementation/system_camera_interface_0_wrapper.ngc 1418818954
+C:/FPGA_leet/implementation/system_camera2mb_wrapper.ngc 1418818975
+C:/FPGA_leet/implementation/system_mb2vga_wrapper.ngc 1418818978
+OK

@@ -1,0 +1,86 @@
+HDL language for the peripheral (top level) design unit vga_interface is vhdl
+...
+INFO:MDT - Create temparary xst project file:
+   D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface.p
+   rj
+Compiling vhdl file
+"D:/Trabalho/EC_lab/Xilinx_starter_kit/_VHDL/Proc_video_modular/main/IP_cores/VG
+A_interface/types.vhd" in Library VGA_interface_v1_00_a.
+Package <types> compiled.
+Compiling vhdl file
+"D:/Trabalho/EC_lab/Xilinx_starter_kit/_VHDL/Proc_video_modular/main/IP_cores/VG
+A_interface/vga_interface.vhd" in Library VGA_interface_v1_00_a.
+Entity <vga_interface> compiled.
+Entity <vga_interface> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"D:/Trabalho/EC_lab/Xilinx_starter_kit/_VHDL/Proc_video_modular/main/IP_cores/VG
+A_interface/tovga.vhd" in Library VGA_interface_v1_00_a.
+Entity <ToVGA> compiled.
+Entity <ToVGA> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"D:/Trabalho/EC_lab/Xilinx_starter_kit/_VHDL/Proc_video_modular/main/IP_cores/VG
+A_interface/sync2.vhd" in Library VGA_interface_v1_00_a.
+Entity <SYNC2> compiled.
+Entity <SYNC2> (Architecture <Behavioral>) compiled.
+Compiling vhdl file
+"D:/Trabalho/EC_lab/Xilinx_starter_kit/_VHDL/Proc_video_modular/main/IP_cores/VG
+A_interface/ram_block2P.vhd" in Library VGA_interface_v1_00_a.
+Entity <ram_block2P> compiled.
+Entity <ram_block2P> (Architecture <Behavioral>) compiled.
+
+
+Analyzing HDL attributes ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VHDL
+INFO:MDT - NO SIGIS=CLK specified for probable Clock signal FSL_S_Clk
+INFO:MDT - NO CLKBUF will be inserted for the signal FSL_S_Clk
+INFO:MDT - NO SIGIS=CLK specified for probable Clock signal FSL_S_Clk
+INFO:MDT - NO CLKBUF will be inserted for the signal FSL_S_Clk
+Copying file ram_block2P.vhd to
+D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface_v1_0
+0_a\hdl\vhdl\ ...
+Copying file sync2.vhd to
+D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface_v1_0
+0_a\hdl\vhdl\ ...
+Copying file tovga.vhd to
+D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface_v1_0
+0_a\hdl\vhdl\ ...
+Copying file types.vhd to
+D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface_v1_0
+0_a\hdl\vhdl\ ...
+Copying file vga_interface.vhd to
+D:\Trabalho\EC_lab\Xilinx_starter_kit\_VHDL\Microblaze\pcores\VGA_interface_v1_0
+0_a\hdl\vhdl\ ...
+
+Summary:
+
+  Logical library	: VGA_interface_v1_00_a
+  Version		: 1.00.a
+  Bus interface(s)	: SFSL 
+
+The following sub-directories will be created in the pcores repository in your
+project:
+
+- VGA_interface_v1_00_a\data
+- VGA_interface_v1_00_a\hdl
+- VGA_interface_v1_00_a\hdl\vhdl
+
+
+The following HDL source files will be copied into the
+vga_interface_v1_00_a\hdl\vhdl directory:
+
+- ram_block2P.vhd
+- sync2.vhd
+- tovga.vhd
+- types.vhd
+- vga_interface.vhd
+
+The following files will be created under the VGA_interface_v1_00_a\data
+directory:
+
+- VGA_interface_v2_1_0.mpd
+- VGA_interface_v2_1_0.pao
+
+Thank you for using this Import Peripheral Wizard!
+

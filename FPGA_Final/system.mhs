@@ -1,0 +1,210 @@
+
+# ##############################################################################
+# Created by Base System Builder Wizard for Xilinx EDK 14.2 Build EDK_P.28xd
+# Wed Nov 05 11:22:26 2014
+# Target Board:  Custom
+# Family:    spartan3
+# Device:    xc3s1000
+# Package:   ft256
+# Speed Grade:  -4
+# Processor number: 1
+# Processor 1: microblaze_0
+# System clock frequency: 50.0
+# Debug Interface: On-Chip HW Debug Module
+# ##############################################################################
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT fpga_0_clk_1_sys_clk_pin = CLK_S, DIR = I, SIGIS = CLK, CLK_FREQ = 50000000
+ PORT fpga_0_rst_1_sys_rst_pin = sys_rst_s, DIR = I, SIGIS = RST, RST_POLARITY = 1
+ PORT running_leds_GPIO_IO_pin = running_leds_GPIO_IO, DIR = IO, VEC = [0:7]
+ PORT camera_interface_0_c04_pin = camera_interface_0_c04, DIR = O
+ PORT camera_interface_0_c05_pin = camera_interface_0_c05, DIR = O
+ PORT camera_interface_0_c06_pin = camera_interface_0_c06, DIR = O
+ PORT camera_interface_0_c07_pin = camera_interface_0_c07, DIR = O
+ PORT camera_interface_0_c08_pin = camera_interface_0_c08, DIR = O
+ PORT camera_interface_0_c09_pin = net_camera_interface_0_c09_pin, DIR = I, VEC = [7:0]
+ PORT camera_interface_0_c11_pin = net_camera_interface_0_c11_pin, DIR = I
+ PORT camera_interface_0_c10_pin = net_camera_interface_0_c10_pin, DIR = I
+ PORT camera_interface_0_c13_pin = net_camera_interface_0_c13_pin, DIR = I
+ PORT camera_interface_0_c12_pin = net_camera_interface_0_c12_pin, DIR = I, SIGIS = CLK
+ PORT VGA_interface_0_v04_pin = VGA_interface_0_v04, DIR = O
+ PORT VGA_interface_0_v05_pin = VGA_interface_0_v05, DIR = O, VEC = [12:0]
+ PORT VGA_interface_0_v06_pin = net_VGA_interface_0_v06_pin, DIR = I, VEC = [7:0]
+ PORT camera_interface_0_c14_pin = net_camera_interface_0_c14_pin, DIR = I
+ PORT VGA_interface_0_v03_pin = VGA_interface_0_v03, DIR = O, VEC = [7:0]
+ PORT VGA_interface_0_v02_pin = VGA_interface_0_v02, DIR = O
+ PORT VGA_interface_0_v01_pin = VGA_interface_0_v01, DIR = O
+
+
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER C_AREA_OPTIMIZED = 1
+ PARAMETER C_USE_BARREL = 1
+ PARAMETER C_DEBUG_ENABLED = 1
+ PARAMETER HW_VER = 8.40.a
+ PARAMETER C_FSL_LINKS = 1
+ PARAMETER C_USE_DIV = 1
+ BUS_INTERFACE DPLB = mb_plb
+ BUS_INTERFACE IPLB = mb_plb
+ BUS_INTERFACE DEBUG = microblaze_0_mdm_bus
+ BUS_INTERFACE DLMB = dlmb
+ BUS_INTERFACE ILMB = ilmb
+ BUS_INTERFACE SFSL0 = camera2mb
+ BUS_INTERFACE MFSL0 = mb2vga
+ PORT MB_RESET = mb_reset
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = mb_plb
+ PARAMETER HW_VER = 1.05.a
+ PORT PLB_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = ilmb
+ PARAMETER HW_VER = 2.00.b
+ PORT LMB_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = dlmb
+ PARAMETER HW_VER = 2.00.b
+ PORT LMB_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_bus_reset
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = dlmb_cntlr
+ PARAMETER HW_VER = 3.10.a
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00007fff
+ BUS_INTERFACE SLMB = dlmb
+ BUS_INTERFACE BRAM_PORT = dlmb_port
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = ilmb_cntlr
+ PARAMETER HW_VER = 3.10.a
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00007fff
+ BUS_INTERFACE SLMB = ilmb
+ BUS_INTERFACE BRAM_PORT = ilmb_port
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = lmb_bram
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = ilmb_port
+ BUS_INTERFACE PORTB = dlmb_port
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = sclk
+ PARAMETER C_CLKIN_FREQ = 50000000
+ PARAMETER C_CLKOUT0_FREQ = 50000000
+ PARAMETER C_CLKOUT0_PHASE = 0
+ PARAMETER C_CLKOUT0_GROUP = NONE
+ PARAMETER C_CLKOUT0_BUF = TRUE
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER HW_VER = 4.03.a
+ PORT CLKIN = CLK_S
+ PORT CLKOUT0 = clk_50_0000MHz
+ PORT RST = sys_rst_s
+ PORT LOCKED = Dcm_all_locked
+END
+
+BEGIN mdm
+ PARAMETER INSTANCE = mdm_0
+ PARAMETER C_MB_DBG_PORTS = 1
+ PARAMETER C_USE_UART = 1
+ PARAMETER HW_VER = 2.10.a
+ PARAMETER C_BASEADDR = 0x84400000
+ PARAMETER C_HIGHADDR = 0x8440ffff
+ BUS_INTERFACE SPLB = mb_plb
+ BUS_INTERFACE MBDEBUG_0 = microblaze_0_mdm_bus
+ PORT Debug_SYS_Rst = Debug_SYS_Rst
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = proc_sys_reset_0
+ PARAMETER C_EXT_RESET_HIGH = 1
+ PARAMETER HW_VER = 3.00.a
+ PORT Slowest_sync_clk = clk_50_0000MHz
+ PORT Ext_Reset_In = sys_rst_s
+ PORT MB_Debug_Sys_Rst = Debug_SYS_Rst
+ PORT Dcm_locked = Dcm_all_locked
+ PORT MB_Reset = mb_reset
+ PORT Bus_Struct_Reset = sys_bus_reset
+ PORT Peripheral_Reset = sys_periph_reset
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_BASEADDR = 0b1111111111
+ PARAMETER C_HIGHADDR = 0b0000000000
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = running_leds
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT GPIO_IO = running_leds_GPIO_IO
+END
+
+BEGIN VGA_interface
+ PARAMETER INSTANCE = VGA_interface_0
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE SFSL = mb2vga
+ PORT v05 = VGA_interface_0_v05
+ PORT v06 = camera_interface_0_c03
+ PORT clock = clk_50_0000MHz
+ PORT v04 = VGA_interface_0_v04
+ PORT v07 = sys_rst_s
+ PORT v03 = VGA_interface_0_v03
+ PORT v02 = VGA_interface_0_v02
+ PORT v01 = VGA_interface_0_v01
+END
+
+BEGIN camera_interface
+ PARAMETER INSTANCE = camera_interface_0
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE MFSL = camera2mb
+ PORT c03 = camera_interface_0_c03
+ PORT clock = clk_50_0000MHz
+ PORT c04 = camera_interface_0_c04
+ PORT c05 = camera_interface_0_c05
+ PORT c06 = camera_interface_0_c06
+ PORT c07 = camera_interface_0_c07
+ PORT c08 = camera_interface_0_c08
+ PORT c09 = net_camera_interface_0_c09_pin
+ PORT c11 = net_camera_interface_0_c11_pin
+ PORT c10 = net_camera_interface_0_c10_pin
+ PORT c13 = net_camera_interface_0_c13_pin
+ PORT c12 = net_camera_interface_0_c12_pin
+ PORT c14 = sys_rst_s
+ PORT c15 = clk_50_0000MHz
+ PORT c01 = VGA_interface_0_v04
+ PORT c02 = VGA_interface_0_v05
+END
+
+BEGIN fsl_v20
+ PARAMETER INSTANCE = camera2mb
+ PARAMETER HW_VER = 2.11.e
+ PORT FSL_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_rst_s
+END
+
+BEGIN fsl_v20
+ PARAMETER INSTANCE = mb2vga
+ PARAMETER HW_VER = 2.11.e
+ PORT FSL_Clk = clk_50_0000MHz
+ PORT SYS_Rst = sys_rst_s
+END
+

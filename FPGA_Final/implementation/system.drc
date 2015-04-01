@@ -1,0 +1,51 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Dec 17 12:26:03 2014
+
+drc -z system.ncd system.pcf
+
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA13> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA14> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA15> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA16> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA17> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA18> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA19> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA20> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA21> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA22> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA23> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA24> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA25> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA26> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA27> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA28> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA29> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA30> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA31> on
+   block:<camera_interface_0/camera_interface_0/HIST_buffer.A>:<RAMB16_RAMB16A>.
+DRC detected 0 errors and 21 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

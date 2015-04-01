@@ -1,0 +1,1331 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\FPGA_leet\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_camera_interface_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\FPGA_leet\pcores\" "d:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "d:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc3s1000ft256-4
+Output File Name                   : "../implementation/system_camera_interface_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_camera_interface_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/ram_block2P.vhd" in Library camera_interface_v1_00_a.
+Entity <ram_block2P> compiled.
+Entity <ram_block2P> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/Shift_register.vhd" in Library camera_interface_v1_00_a.
+Entity <Shift_register> compiled.
+Entity <Shift_register> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/gen_start.vhd" in Library camera_interface_v1_00_a.
+Entity <gen_start> compiled.
+Entity <gen_start> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/write_data.vhd" in Library camera_interface_v1_00_a.
+Entity <write_data> compiled.
+Entity <write_data> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/gen_stop1.vhd" in Library camera_interface_v1_00_a.
+Entity <gen_stop> compiled.
+Entity <gen_stop> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/read_data.vhd" in Library camera_interface_v1_00_a.
+Entity <read_data> compiled.
+Entity <read_data> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/write_cycle.vhd" in Library camera_interface_v1_00_a.
+Entity <write_cycle> compiled.
+Entity <write_cycle> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/read_cycle.vhd" in Library camera_interface_v1_00_a.
+Entity <read_cycle> compiled.
+Entity <read_cycle> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/types.vhd" in Library camera_interface_v1_00_a.
+Package <types> compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_sync.vhd" in Library camera_interface_v1_00_a.
+Entity <camera_sync> compiled.
+Entity <camera_sync> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/QVGA_to_128x64.vhd" in Library camera_interface_v1_00_a.
+Entity <QVGA_to_128x64> compiled.
+Entity <QVGA_to_128x64> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/ram_block3P.vhd" in Library camera_interface_v1_00_a.
+Entity <ram_block3P> compiled.
+Entity <ram_block3P> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_config.vhd" in Library camera_interface_v1_00_a.
+Entity <camera_config> compiled.
+Entity <camera_config> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/program_regs_OV9650.vhd" in Library camera_interface_v1_00_a.
+Entity <program_regs> compiled.
+Entity <program_regs> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/image_capture.vhd" in Library camera_interface_v1_00_a.
+Entity <image_capture> compiled.
+Entity <image_capture> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_interface.vhd" in Library camera_interface_v1_00_a.
+Entity <camera_interface> compiled.
+Entity <camera_interface> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/FPGA_leet/hdl/system_camera_interface_0_wrapper.vhd" in Library work.
+Entity <system_camera_interface_0_wrapper> compiled.
+Entity <system_camera_interface_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system_camera_interface_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <camera_interface> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <program_regs> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <image_capture> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <camera_config> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <camera_sync> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <QVGA_to_128x64> in library <camera_interface_v1_00_a> (architecture <Behavioral>) with generics.
+	size = 8
+
+Analyzing hierarchy for entity <ram_block3P> in library <camera_interface_v1_00_a> (architecture <Behavioral>) with generics.
+	asize = 13
+	dsize = 8
+
+Analyzing hierarchy for entity <gen_start> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <write_data> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <gen_stop> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <read_data> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <write_cycle> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <read_cycle> in library <camera_interface_v1_00_a> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Shift_register> in library <camera_interface_v1_00_a> (architecture <Behavioral>) with generics.
+	delay = 2
+	size = 8
+
+Analyzing hierarchy for entity <ram_block2P> in library <camera_interface_v1_00_a> (architecture <Behavioral>) with generics.
+	asize = 13
+	dsize = 8
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system_camera_interface_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <system_camera_interface_0_wrapper> analyzed. Unit <system_camera_interface_0_wrapper> generated.
+
+Analyzing Entity <camera_interface> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+    Set property "buffer_type = bufg" for signal <pxl_clock>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_A =  000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "INIT_B =  000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "SRVAL_A =  000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "SRVAL_B =  000000000" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <HIST_buffer> in unit <camera_interface>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <HIST_buffer> in unit <camera_interface>.
+Entity <camera_interface> analyzed. Unit <camera_interface> generated.
+
+Analyzing Entity <program_regs> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <program_regs> analyzed. Unit <program_regs> generated.
+
+Analyzing Entity <camera_config> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+INFO:Xst:1561 - "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_config.vhd" line 228: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_config.vhd" line 239: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_config.vhd" line 250: Mux is complete : default of case is discarded
+Entity <camera_config> analyzed. Unit <camera_config> generated.
+
+Analyzing Entity <gen_start> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <gen_start> analyzed. Unit <gen_start> generated.
+
+Analyzing Entity <write_data> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <write_data> analyzed. Unit <write_data> generated.
+
+Analyzing Entity <gen_stop> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <gen_stop> analyzed. Unit <gen_stop> generated.
+
+Analyzing Entity <read_data> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <read_data> analyzed. Unit <read_data> generated.
+
+Analyzing Entity <write_cycle> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <write_cycle> analyzed. Unit <write_cycle> generated.
+
+Analyzing Entity <read_cycle> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <read_cycle> analyzed. Unit <read_cycle> generated.
+
+Analyzing Entity <image_capture> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <image_capture> analyzed. Unit <image_capture> generated.
+
+Analyzing Entity <camera_sync> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+Entity <camera_sync> analyzed. Unit <camera_sync> generated.
+
+Analyzing generic Entity <QVGA_to_128x64> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+	size = 8
+Entity <QVGA_to_128x64> analyzed. Unit <QVGA_to_128x64> generated.
+
+Analyzing generic Entity <Shift_register> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+	delay = 2
+	size = 8
+Entity <Shift_register> analyzed. Unit <Shift_register> generated.
+
+Analyzing generic Entity <ram_block3P> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+	asize = 13
+	dsize = 8
+Entity <ram_block3P> analyzed. Unit <ram_block3P> generated.
+
+Analyzing generic Entity <ram_block2P> in library <camera_interface_v1_00_a> (Architecture <Behavioral>).
+	asize = 13
+	dsize = 8
+Entity <ram_block2P> analyzed. Unit <ram_block2P> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <gen_start>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/gen_start.vhd".
+    Found finite state machine <FSM_0> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | fscl                      (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <sda>.
+    Found 1-bit register for signal <scl>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 D-type flip-flop(s).
+Unit <gen_start> synthesized.
+
+
+Synthesizing Unit <write_data>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/write_data.vhd".
+    Found finite state machine <FSM_1> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 13                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 12                                             |
+    | Clock              | fscl                      (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <error>.
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <sda>.
+    Found 1-bit register for signal <scl>.
+    Found 3-bit register for signal <cnt>.
+    Found 3-bit subtractor for signal <cnt$addsub0000> created at line 101.
+    Found 1-bit 8-to-1 multiplexer for signal <data_in$mux0000> created at line 58.
+    Found 1-bit tristate buffer for signal <sda_nxt>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <write_data> synthesized.
+
+
+Synthesizing Unit <gen_stop>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/gen_stop1.vhd".
+    Found finite state machine <FSM_2> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | fscl                      (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <sda>.
+    Found 1-bit register for signal <scl>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 D-type flip-flop(s).
+Unit <gen_stop> synthesized.
+
+
+Synthesizing Unit <read_data>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/read_data.vhd".
+    Found finite state machine <FSM_3> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 12                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 12                                             |
+    | Clock              | fscl                      (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <sda>.
+    Found 1-bit register for signal <scl>.
+    Found 3-bit register for signal <cnt>.
+    Found 3-bit subtractor for signal <cnt$addsub0000> created at line 85.
+    Found 1-bit register for signal <en_reg>.
+    Found 8-bit register for signal <p_data_out>.
+    Found 1-bit tristate buffer for signal <sda_nxt>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Tristate(s).
+Unit <read_data> synthesized.
+
+
+Synthesizing Unit <write_cycle>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/write_cycle.vhd".
+    Found finite state machine <FSM_4> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | fscl                      (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle_end                                       |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 2-bit register for signal <sel_block>.
+    Found 1-bit register for signal <done>.
+    Found 3-bit register for signal <restart_block>.
+    Found 8-bit register for signal <data_to_send>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  14 D-type flip-flop(s).
+Unit <write_cycle> synthesized.
+
+
+Synthesizing Unit <read_cycle>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/read_cycle.vhd".
+    Found finite state machine <FSM_5> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | fscl                      (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle_end                                       |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 3-bit register for signal <sel_block>.
+    Found 1-bit register for signal <done>.
+    Found 4-bit register for signal <restart_block>.
+    Found 8-bit register for signal <data_to_send>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  16 D-type flip-flop(s).
+Unit <read_cycle> synthesized.
+
+
+Synthesizing Unit <camera_sync>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_sync.vhd".
+    Found 13-bit up counter for signal <column>.
+    Found 1-bit register for signal <HREF2>.
+    Found 1-bit register for signal <HREF3>.
+    Found 1-bit register for signal <HREF4>.
+    Found 12-bit up counter for signal <line>.
+    Found 1-bit register for signal <PXL_CLK2>.
+    Found 1-bit register for signal <PXL_CLK3>.
+    Found 1-bit register for signal <VSYNC2>.
+    Found 1-bit register for signal <VSYNC3>.
+    Found 1-bit register for signal <WE>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   8 D-type flip-flop(s).
+Unit <camera_sync> synthesized.
+
+
+Synthesizing Unit <Shift_register>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/Shift_register.vhd".
+    Found 16-bit register for signal <shift<2:1>>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <Shift_register> synthesized.
+
+
+Synthesizing Unit <ram_block2P>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/ram_block2P.vhd".
+    Found 8192x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 13-bit register for signal <read_dpra>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  13 D-type flip-flop(s).
+Unit <ram_block2P> synthesized.
+
+
+Synthesizing Unit <camera_config>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_config.vhd".
+    Found 1-bit register for signal <error_cnt>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <camera_config> synthesized.
+
+
+Synthesizing Unit <QVGA_to_128x64>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/QVGA_to_128x64.vhd".
+WARNING:Xst:647 - Input <icol<12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ilin<11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <xn_a1<3>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8x8-bit multiplier for signal <aux$mult0000> created at line 79.
+    Found 8x8-bit multiplier for signal <aux0$mult0000> created at line 87.
+    Found 10-bit adder for signal <aux1$add0000> created at line 114.
+    Found 10-bit adder for signal <aux1$addsub0000> created at line 114.
+    Found 10-bit adder for signal <aux1$addsub0001> created at line 114.
+    Found 11-bit subtractor for signal <colaux>.
+    Found 8-bit register for signal <Di2>.
+    Found 11-bit subtractor for signal <linaux>.
+    Found 8-bit register for signal <Yaux2>.
+    Found 8-bit register for signal <Yaux3>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+Unit <QVGA_to_128x64> synthesized.
+
+
+Synthesizing Unit <ram_block3P>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/ram_block3P.vhd".
+    Found 1-bit register for signal <CLKB_div>.
+    Found 8-bit register for signal <DOB1_aux>.
+    Found 8-bit register for signal <DOB2_aux>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <ram_block3P> synthesized.
+
+
+Synthesizing Unit <program_regs>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/program_regs_OV9650.vhd".
+WARNING:Xst:646 - Signal <iData> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <error> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <cs>.
+    Found 1-bit register for signal <cam_rst>.
+    Found 8-bit register for signal <Add>.
+    Found 4-bit register for signal <cs>.
+    Found 8-bit up counter for signal <divider>.
+    Found 1-bit register for signal <eCycle>.
+    Found 1-bit register for signal <eCycle2>.
+    Found 1-bit register for signal <eCycle3>.
+    Found 8-bit register for signal <ID>.
+    Found 1-bit register for signal <n2_3>.
+    Found 4-bit register for signal <ns>.
+    Found 1-bit register for signal <nW_R>.
+    Found 8-bit register for signal <nxt_prog_add>.
+    Found 8-bit adder for signal <nxt_prog_add$addsub0000> created at line 279.
+    Found 8-bit register for signal <oData>.
+    Found 8-bit register for signal <prog_add>.
+    Found 1-bit register for signal <program2>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  51 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <program_regs> synthesized.
+
+
+Synthesizing Unit <image_capture>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/image_capture.vhd".
+    Found 1-bit register for signal <clk_div>.
+    Found 1-bit register for signal <cnt_cam<0>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <image_capture> synthesized.
+
+
+Synthesizing Unit <camera_interface>.
+    Related source file is "C:/FPGA_leet/pcores/camera_interface_v1_00_a/hdl/vhdl/camera_interface.vhd".
+WARNING:Xst:646 - Signal <outCam<31:13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <nxt_FSL_M_Write> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <DATAOUT<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_6> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_7> for signal <HIST_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | hist_reset_st                                  |
+    | Power Up State     | hist_reset_st                                  |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <FSL_M_Write>.
+    Found 9-bit register for signal <addrCam>.
+    Found 13-bit register for signal <ADDRESS>.
+    Found 9-bit register for signal <addrMB>.
+    Found 9-bit adder for signal <addrMB$addsub0000>.
+    Found 1-bit register for signal <HIST_Full>.
+    Found 1-bit register for signal <HIST_Write>.
+    Found 13-bit adder for signal <inCam$add0000> created at line 283.
+    Found 13-bit adder for signal <nxt_ADDRESS$addsub0000> created at line 237.
+    Found 1-bit register for signal <weCam>.
+    Found 1-bit register for signal <weCamDelay>.
+    Found 1-bit register for signal <weMB>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred  37 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <camera_interface> synthesized.
+
+
+Synthesizing Unit <system_camera_interface_0_wrapper>.
+    Related source file is "C:/FPGA_leet/hdl/system_camera_interface_0_wrapper.vhd".
+Unit <system_camera_interface_0_wrapper> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8192x8-bit dual-port RAM                              : 1
+# Multipliers                                          : 2
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 11
+ 10-bit adder                                          : 3
+ 11-bit subtractor                                     : 2
+ 13-bit adder                                          : 2
+ 3-bit subtractor                                      : 2
+ 8-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 3
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 76
+ 1-bit register                                        : 41
+ 13-bit register                                       : 2
+ 2-bit register                                        : 1
+ 3-bit register                                        : 4
+ 4-bit register                                        : 3
+ 8-bit register                                        : 23
+ 9-bit register                                        : 2
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_7> for best encoding.
+Optimizing FSM <camera_interface_0/HIST_state/FSM> on signal <HIST_state[1:2]> with gray encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ hist_reset_st | 00
+ hist_write_st | 01
+ hist_read1_st | 11
+ hist_read2_st | 10
+---------------------------
+Analyzing FSM <FSM_6> for best encoding.
+Optimizing FSM <camera_interface_0/CS/FSM> on signal <CS[1:5]> with one-hot encoding.
+--------------------
+ State  | Encoding
+--------------------
+ idle   | 00001
+ write1 | 00010
+ write2 | 00100
+ write3 | 01000
+ wait1  | 10000
+--------------------
+Analyzing FSM <FSM_5> for best encoding.
+Optimizing FSM <camera_interface_0/U2/U1/read_cycle1/st/FSM> on signal <st[1:6]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 000001
+ start    | 000100
+ phase1   | 001000
+ phase2   | 010000
+ stop     | 100000
+ idle_end | 000010
+----------------------
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <camera_interface_0/U2/U1/write_cycle1/st/FSM> on signal <st[1:3]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 000
+ start    | 011
+ phase1   | 010
+ phase2   | 110
+ phase3   | 111
+ stop     | 101
+ idle_end | 001
+----------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <camera_interface_0/U2/U1/read_data1/st/FSM> on signal <st[1:10]> with one-hot encoding.
+----------------------
+ State  | Encoding
+----------------------
+ idle   | 0000000001
+ rd_a   | 0000000010
+ rd_b   | 0000000100
+ rd_c   | 0000001000
+ rd_d   | 0000010000
+ nack_a | 0000100000
+ nack_b | 0001000000
+ nack_c | 0010000000
+ nack_d | 0100000000
+ nack_e | 1000000000
+----------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <camera_interface_0/U2/U1/gen_stop1/st/FSM> on signal <st[1:6]> with one-hot encoding.
+--------------------
+ State  | Encoding
+--------------------
+ idle   | 000001
+ stop_a | 000010
+ stop_b | 000100
+ stop_c | 001000
+ stop_d | 010000
+ stop_e | 100000
+--------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <camera_interface_0/U2/U1/write_data1/st/FSM> on signal <st[1:11]> with one-hot encoding.
+-----------------------
+ State  | Encoding
+-----------------------
+ idle   | 00000000001
+ wr_a   | 00000000010
+ wr_b   | 00000000100
+ wr_c   | 00000001000
+ wr_d   | 00000010000
+ ack_a0 | 00000100000
+ ack_a1 | 00001000000
+ ack_a2 | 00010000000
+ ack_b  | 00100000000
+ ack_c  | 01000000000
+ ack_d  | 10000000000
+-----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <camera_interface_0/U2/U1/gen_start1/st/FSM> on signal <st[1:3]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ idle    | 000
+ start_a | 001
+ start_b | 010
+ start_c | 011
+ start_d | 100
+ start_e | 101
+---------------------
+WARNING:Xst:2404 -  FFs/Latches <ID<7:7>> (without init value) have a constant value of 0 in block <program_regs>.
+WARNING:Xst:2404 -  FFs/Latches <Add<7:6>> (without init value) have a constant value of 0 in block <program_regs>.
+
+Synthesizing (advanced) Unit <ram_block2P>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_dpra>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLKA>          | rise     |
+    |     weA            | connected to signal <WEA_0>         | high     |
+    |     addrA          | connected to signal <ADDRA>         |          |
+    |     diA            | connected to signal <DIA>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLKB>          | rise     |
+    |     enB            | connected to signal <ENB>           | high     |
+    |     addrB          | connected to signal <ADDRB>         |          |
+    |     doB            | connected to signal <DOB>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ram_block2P> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 8
+# RAMs                                                 : 1
+ 8192x8-bit dual-port block RAM                        : 1
+# Multipliers                                          : 2
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 11
+ 10-bit adder                                          : 3
+ 11-bit subtractor                                     : 2
+ 13-bit adder                                          : 2
+ 3-bit subtractor                                      : 2
+ 8-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 3
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 279
+ Flip-Flops                                            : 279
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch ns_0 hinder the constant cleaning in the block program_regs.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <oData_3> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <oData_5> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ID_0> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ID_1> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ID_2> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ID_3> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ID_4> (without init value) has a constant value of 0 in block <program_regs>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addrCam_7> (without init value) has a constant value of 0 in block <camera_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addrCam_8> (without init value) has a constant value of 0 in block <camera_interface>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <done> in Unit <gen_stop> is equivalent to the following FF/Latch, which will be removed : <sda> 
+INFO:Xst:2261 - The FF/Latch <n2_3> in Unit <program_regs> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_5> <ID_6> 
+WARNING:Xst:2677 - Node <ns_3> of sequential type is unconnected in block <program_regs>.
+WARNING:Xst:2677 - Node <cs_3> of sequential type is unconnected in block <program_regs>.
+INFO:Xst:1901 - Instance HIST_buffer in unit HIST_buffer of type RAMB16_S36_S36 has been replaced by RAMB16
+INFO:Xst:2261 - The FF/Latch <st_FSM_FFd2> in Unit <read_cycle> is equivalent to the following FF/Latch, which will be removed : <sel_block_2> 
+WARNING:Xst:2041 - Unit read_data: 1 internal tristate is replaced by logic (pull-up yes): sda_nxt.
+WARNING:Xst:2041 - Unit write_data: 1 internal tristate is replaced by logic (pull-up yes): sda_nxt.
+
+Optimizing unit <system_camera_interface_0_wrapper> ...
+
+Optimizing unit <write_data> ...
+
+Optimizing unit <read_data> ...
+
+Optimizing unit <write_cycle> ...
+
+Optimizing unit <read_cycle> ...
+
+Optimizing unit <camera_sync> ...
+
+Optimizing unit <Shift_register> ...
+
+Optimizing unit <camera_config> ...
+
+Optimizing unit <QVGA_to_128x64> ...
+
+Optimizing unit <ram_block3P> ...
+
+Optimizing unit <program_regs> ...
+
+Optimizing unit <image_capture> ...
+
+Optimizing unit <camera_interface> ...
+WARNING:Xst:1710 - FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_0> (without init value) has a constant value of 0 in block <system_camera_interface_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_1> (without init value) has a constant value of 0 in block <system_camera_interface_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_2> (without init value) has a constant value of 0 in block <system_camera_interface_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_3> (without init value) has a constant value of 0 in block <system_camera_interface_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_4> (without init value) has a constant value of 0 in block <system_camera_interface_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_7> (without init value) has a constant value of 0 in block <system_camera_interface_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <camera_interface_0/U3/U3/column_12> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U3/U3/line_11> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U3/UM0a/DOB2_aux_0> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/en_reg> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_0> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_1> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_2> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_3> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_4> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_5> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_6> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/read_data1/p_data_out_7> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/write_data1/error> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+WARNING:Xst:2677 - Node <camera_interface_0/U2/U1/error_cnt> of sequential type is unconnected in block <system_camera_interface_0_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U3/u_qvgatoarray/u01/shift_1_6> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U3/u_qvgatoarray/u01/shift_1_7> 
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U2/U1/read_cycle1/data_to_send_5> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U2/U1/read_cycle1/data_to_send_6> 
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U3/u_qvgatoarray/u01/shift_2_6> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U3/u_qvgatoarray/u01/shift_2_7> 
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U3/u_qvgatoarray/u02/shift_1_6> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U3/u_qvgatoarray/u02/shift_1_7> 
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U3/u_qvgatoarray/u02/shift_2_6> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U3/u_qvgatoarray/u02/shift_2_7> 
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U3/u_qvgatoarray/u03/shift_1_6> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U3/u_qvgatoarray/u03/shift_1_7> 
+INFO:Xst:2261 - The FF/Latch <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_6> in Unit <system_camera_interface_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_7> 
+
+Final Macro Processing ...
+
+Processing Unit <system_camera_interface_0_wrapper> :
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_0>.
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_1>.
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_2>.
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_3>.
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_4>.
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_5>.
+	Found 6-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u03/shift_2_6>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_0>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_1>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_2>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_3>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_4>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_5>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_6>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u11/shift_2_7>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_0>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_1>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_2>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_3>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_4>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_5>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_6>.
+	Found 2-bit shift register for signal <camera_interface_0/U3/u_qvgatoarray/u12/shift_2_7>.
+Unit <system_camera_interface_0_wrapper> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 242
+ Flip-Flops                                            : 242
+# Shift Registers                                      : 23
+ 2-bit shift register                                  : 16
+ 6-bit shift register                                  : 7
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_camera_interface_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 78
+
+Cell Usage :
+# BELS                             : 541
+#      GND                         : 6
+#      INV                         : 16
+#      LUT1                        : 52
+#      LUT2                        : 49
+#      LUT3                        : 68
+#      LUT3_D                      : 1
+#      LUT4                        : 165
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
+#      MUXCY                       : 70
+#      MUXF5                       : 32
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 76
+# FlipFlops/Latches                : 265
+#      FD                          : 39
+#      FDC                         : 92
+#      FDCE                        : 9
+#      FDE                         : 24
+#      FDP                         : 13
+#      FDPE_1                      : 8
+#      FDR                         : 32
+#      FDRE                        : 23
+#      FDRS                        : 9
+#      FDS                         : 16
+# RAMS                             : 5
+#      RAMB16                      : 5
+# Shift Registers                  : 23
+#      SRL16E                      : 23
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# MULTs                            : 2
+#      MULT18X18                   : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                      217  out of   7680     2%  
+ Number of Slice Flip Flops:            265  out of  15360     1%  
+ Number of 4 input LUTs:                378  out of  15360     2%  
+    Number used as logic:               355
+    Number used as Shift registers:      23
+ Number of IOs:                          78
+ Number of bonded IOBs:                   0  out of    173     0%  
+ Number of BRAMs:                         5  out of     24    20%  
+ Number of MULT18X18s:                    2  out of     24     8%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                            | Load  |
+-----------------------------------+--------------------------------------------------+-------+
+c15                                | NONE(camera_interface_0/U3/cnt_cam_0)            | 89    |
+c12                                | NONE(camera_interface_0/U3/u_qvgatoarray/Yaux3_7)| 70    |
+camera_interface_0/U2/divider_7    | BUFG                                             | 91    |
+FSL_M_Clk                          | NONE(camera_interface_0/CS_FSM_FFd2)             | 43    |
+-----------------------------------+--------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------+------------------------------------------------------+-------+
+Control Signal                                                                     | Buffer(FF name)                                      | Load  |
+-----------------------------------------------------------------------------------+------------------------------------------------------+-------+
+camera_interface_0/U2/program_reset(camera_interface_0/U2/program_reset_and00001:O)| NONE(camera_interface_0/U2/U1/gen_start1/st_FSM_FFd1)| 67    |
+c14                                                                                | NONE                                                 | 44    |
+camera_interface_0/U2/button_inv(camera_interface_0/U2/button_inv1_INV_0:O)        | NONE(camera_interface_0/U2/cs_0)                     | 11    |
+-----------------------------------------------------------------------------------+------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.627ns (Maximum Frequency: 73.384MHz)
+   Minimum input arrival time before clock: 2.404ns
+   Maximum output required time after clock: 5.322ns
+   Maximum combinational path delay: 0.000ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'c15'
+  Clock period: 8.866ns (frequency: 112.790MHz)
+  Total number of paths / destination ports: 447 / 222
+-------------------------------------------------------------------------
+Delay:               8.866ns (Levels of Logic = 4)
+  Source:            camera_interface_0/U2/nW_R (FF)
+  Destination:       camera_interface_0/U2/nxt_prog_add_7 (FF)
+  Source Clock:      c15 rising
+  Destination Clock: c15 rising
+
+  Data Path: camera_interface_0/U2/nW_R to camera_interface_0/U2/nxt_prog_add_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             20   0.720   1.884  camera_interface_0/U2/nW_R (camera_interface_0/U2/nW_R)
+     LUT3_D:I0->O          8   0.551   1.109  camera_interface_0/U2/U1/done1 (camera_interface_0/U2/cycle_done)
+     LUT4_D:I3->LO         1   0.551   0.295  camera_interface_0/U2/nxt_prog_add_mux0001<3>11 (N146)
+     LUT4:I1->O            1   0.551   0.827  camera_interface_0/U2/nxt_prog_add_mux0001<0>13 (camera_interface_0/U2/nxt_prog_add_mux0001<0>13)
+     LUT4:I3->O            1   0.551   0.801  camera_interface_0/U2/nxt_prog_add_mux0001<0>29 (camera_interface_0/U2/nxt_prog_add_mux0001<0>29)
+     FDS:S                     1.026          camera_interface_0/U2/nxt_prog_add_7
+    ----------------------------------------
+    Total                      8.866ns (3.950ns logic, 4.916ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'c12'
+  Clock period: 13.627ns (frequency: 73.384MHz)
+  Total number of paths / destination ports: 35144 / 70
+-------------------------------------------------------------------------
+Delay:               13.627ns (Levels of Logic = 7)
+  Source:            camera_interface_0/U3/u_qvgatoarray/Di2_7 (FF)
+  Destination:       camera_interface_0/U3/u_qvgatoarray/Yaux2_7 (FF)
+  Source Clock:      c12 rising
+  Destination Clock: c12 rising
+
+  Data Path: camera_interface_0/U3/u_qvgatoarray/Di2_7 to camera_interface_0/U3/u_qvgatoarray/Yaux2_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.720   0.877  camera_interface_0/U3/u_qvgatoarray/Di2_7 (camera_interface_0/U3/u_qvgatoarray/Di2_7)
+     MULT18X18:A7->P14     5   3.493   0.989  camera_interface_0/U3/u_qvgatoarray/Mmult_aux_mult0000 (camera_interface_0/U3/u_qvgatoarray/xn_a0<0><6>)
+     LUT3:I2->O            0   0.551   0.000  camera_interface_0/U3/u_qvgatoarray/Madd_aux1_addsub0001C51 (camera_interface_0/U3/u_qvgatoarray/Madd_aux1_addsub0001C5)
+     MUXCY:DI->O           1   0.889   0.000  camera_interface_0/U3/u_qvgatoarray/Madd_aux1_addsub0001_Madd_cy<7> (camera_interface_0/U3/u_qvgatoarray/Madd_aux1_addsub0001_Madd_cy<7>)
+     XORCY:CI->O           1   0.904   1.140  camera_interface_0/U3/u_qvgatoarray/Madd_aux1_addsub0001_Madd_xor<8> (camera_interface_0/U3/u_qvgatoarray/aux1_addsub0001<8>)
+     LUT1:I0->O            1   0.551   0.000  camera_interface_0/U3/u_qvgatoarray/Madd_aux1_add0000_cy<8>_rt (camera_interface_0/U3/u_qvgatoarray/Madd_aux1_add0000_cy<8>_rt)
+     MUXCY:S->O            0   0.500   0.000  camera_interface_0/U3/u_qvgatoarray/Madd_aux1_add0000_cy<8> (camera_interface_0/U3/u_qvgatoarray/Madd_aux1_add0000_cy<8>)
+     XORCY:CI->O           8   0.904   1.083  camera_interface_0/U3/u_qvgatoarray/Madd_aux1_add0000_xor<9> (camera_interface_0/U3/u_qvgatoarray/aux1_add0000<9>)
+     FDS:S                     1.026          camera_interface_0/U3/u_qvgatoarray/Yaux2_7
+    ----------------------------------------
+    Total                     13.627ns (9.538ns logic, 4.089ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'camera_interface_0/U2/divider_7'
+  Clock period: 7.968ns (frequency: 125.502MHz)
+  Total number of paths / destination ports: 513 / 87
+-------------------------------------------------------------------------
+Delay:               7.968ns (Levels of Logic = 4)
+  Source:            camera_interface_0/U2/U1/write_data1/done (FF)
+  Destination:       camera_interface_0/U2/U1/write_cycle1/data_to_send_0 (FF)
+  Source Clock:      camera_interface_0/U2/divider_7 rising
+  Destination Clock: camera_interface_0/U2/divider_7 rising
+
+  Data Path: camera_interface_0/U2/U1/write_data1/done to camera_interface_0/U2/U1/write_cycle1/data_to_send_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              16   0.720   1.576  camera_interface_0/U2/U1/write_data1/done (camera_interface_0/U2/U1/write_data1/done)
+     LUT3:I0->O            3   0.551   1.246  camera_interface_0/U2/U1/write_cycle1/st_cmp_eq00011 (camera_interface_0/U2/U1/write_cycle1/st_cmp_eq0001)
+     LUT4:I0->O            2   0.551   1.072  camera_interface_0/U2/U1/write_cycle1/data_to_send_nxt<0>6_SW0 (N47)
+     LUT2:I1->O            5   0.551   0.947  camera_interface_0/U2/U1/write_cycle1/data_to_send_nxt<0>6 (camera_interface_0/U2/U1/write_cycle1/N7)
+     LUT4:I3->O            1   0.551   0.000  camera_interface_0/U2/U1/write_cycle1/data_to_send_nxt<6>1 (camera_interface_0/U2/U1/write_cycle1/data_to_send_nxt<6>)
+     FDC:D                     0.203          camera_interface_0/U2/U1/write_cycle1/data_to_send_6
+    ----------------------------------------
+    Total                      7.968ns (3.127ns logic, 4.841ns route)
+                                       (39.2% logic, 60.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FSL_M_Clk'
+  Clock period: 8.129ns (frequency: 123.016MHz)
+  Total number of paths / destination ports: 400 / 60
+-------------------------------------------------------------------------
+Delay:               8.129ns (Levels of Logic = 5)
+  Source:            camera_interface_0/ADDRESS_6 (FF)
+  Destination:       camera_interface_0/CS_FSM_FFd4 (FF)
+  Source Clock:      FSL_M_Clk rising
+  Destination Clock: FSL_M_Clk rising
+
+  Data Path: camera_interface_0/ADDRESS_6 to camera_interface_0/CS_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.720   1.256  camera_interface_0/ADDRESS_6 (camera_interface_0/ADDRESS_6)
+     LUT4:I0->O            1   0.551   0.827  camera_interface_0/CS_FSM_FFd1-In217 (camera_interface_0/CS_FSM_FFd1-In217)
+     LUT4:I3->O            1   0.551   0.827  camera_interface_0/CS_FSM_FFd1-In227_SW0 (N105)
+     LUT4_D:I3->O          3   0.551   1.102  camera_interface_0/CS_FSM_FFd1-In227 (camera_interface_0/CS_FSM_FFd1-In_bdd0)
+     LUT4_L:I1->LO         1   0.551   0.439  camera_interface_0/CS_FSM_FFd4-In1_SW0 (N72)
+     LUT3:I0->O            1   0.551   0.000  camera_interface_0/CS_FSM_FFd4-In1 (camera_interface_0/CS_FSM_FFd4-In)
+     FDC:D                     0.203          camera_interface_0/CS_FSM_FFd4
+    ----------------------------------------
+    Total                      8.129ns (3.678ns logic, 4.451ns route)
+                                       (45.2% logic, 54.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'c15'
+  Total number of paths / destination ports: 63 / 63
+-------------------------------------------------------------------------
+Offset:              2.404ns (Levels of Logic = 1)
+  Source:            c10 (PAD)
+  Destination:       camera_interface_0/U3/U3/WE (FF)
+  Destination Clock: c15 rising
+
+  Data Path: c10 to camera_interface_0/U3/U3/WE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I3->O            1   0.551   0.801  camera_interface_0/U3/U3/WE_not00011 (camera_interface_0/U3/U3/WE_not0001)
+     FDR:R                     1.026          camera_interface_0/U3/U3/WE
+    ----------------------------------------
+    Total                      2.404ns (1.603ns logic, 0.801ns route)
+                                       (66.7% logic, 33.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'c12'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.203ns (Levels of Logic = 0)
+  Source:            c09<7> (PAD)
+  Destination:       camera_interface_0/U3/u_qvgatoarray/Di2_7 (FF)
+  Destination Clock: c12 rising
+
+  Data Path: c09<7> to camera_interface_0/U3/u_qvgatoarray/Di2_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:D                      0.203          camera_interface_0/U3/u_qvgatoarray/Di2_7
+    ----------------------------------------
+    Total                      0.203ns (0.203ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FSL_M_Clk'
+  Total number of paths / destination ports: 25 / 25
+-------------------------------------------------------------------------
+Offset:              1.026ns (Levels of Logic = 0)
+  Source:            c14 (PAD)
+  Destination:       camera_interface_0/HIST_state_FSM_FFd2 (FF)
+  Destination Clock: FSL_M_Clk rising
+
+  Data Path: c14 to camera_interface_0/HIST_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:R                     1.026          camera_interface_0/addrMB_0
+    ----------------------------------------
+    Total                      1.026ns (1.026ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'c15'
+  Total number of paths / destination ports: 20 / 12
+-------------------------------------------------------------------------
+Offset:              5.322ns (Levels of Logic = 3)
+  Source:            camera_interface_0/U2/nW_R (FF)
+  Destination:       c07 (PAD)
+  Source Clock:      c15 rising
+
+  Data Path: camera_interface_0/U2/nW_R to c07
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             20   0.720   1.884  camera_interface_0/U2/nW_R (camera_interface_0/U2/nW_R)
+     LUT2:I0->O            4   0.551   1.256  camera_interface_0/U2/U1/sel_block<2>1 (camera_interface_0/U2/U1/sel_block<2>)
+     LUT4:I0->O            1   0.551   0.000  camera_interface_0/U2/U1/bus_out<1>1 (camera_interface_0/U2/U1/bus_out<1>)
+     MUXF5:I1->O           0   0.360   0.000  camera_interface_0/U2/U1/bus_out<1>_f5 (c08)
+    ----------------------------------------
+    Total                      5.322ns (2.182ns logic, 3.140ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'camera_interface_0/U2/divider_7'
+  Total number of paths / destination ports: 24 / 2
+-------------------------------------------------------------------------
+Offset:              4.550ns (Levels of Logic = 3)
+  Source:            camera_interface_0/U2/U1/read_cycle1/st_FSM_FFd2 (FF)
+  Destination:       c07 (PAD)
+  Source Clock:      camera_interface_0/U2/divider_7 rising
+
+  Data Path: camera_interface_0/U2/U1/read_cycle1/st_FSM_FFd2 to c07
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.720   1.112  camera_interface_0/U2/U1/read_cycle1/st_FSM_FFd2 (camera_interface_0/U2/U1/read_cycle1/st_FSM_FFd2)
+     LUT2:I1->O            4   0.551   1.256  camera_interface_0/U2/U1/sel_block<2>1 (camera_interface_0/U2/U1/sel_block<2>)
+     LUT4:I0->O            1   0.551   0.000  camera_interface_0/U2/U1/bus_out<1>1 (camera_interface_0/U2/U1/bus_out<1>)
+     MUXF5:I1->O           0   0.360   0.000  camera_interface_0/U2/U1/bus_out<1>_f5 (c08)
+    ----------------------------------------
+    Total                      4.550ns (2.182ns logic, 2.368ns route)
+                                       (48.0% logic, 52.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'FSL_M_Clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.720ns (Levels of Logic = 0)
+  Source:            camera_interface_0/FSL_M_Write (FF)
+  Destination:       FSL_M_Write (PAD)
+  Source Clock:      FSL_M_Clk rising
+
+  Data Path: camera_interface_0/FSL_M_Write to FSL_M_Write
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              0   0.720   0.000  camera_interface_0/FSL_M_Write (camera_interface_0/FSL_M_Write)
+    ----------------------------------------
+    Total                      0.720ns (0.720ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.000ns (Levels of Logic = 0)
+  Source:            clock (PAD)
+  Destination:       FSL_M_Clk (PAD)
+
+  Data Path: clock to FSL_M_Clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.44 secs
+ 
+--> 
+
+Total memory usage is 288320 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;camera_sw_emboss/src/hist.c&apos; to &apos;emboos.c&apos;" description="Rename resource &apos;hist.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/hist.c" name="emboos.c" stamp="1418215908452" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;camera_sw_emboss/src/emboos.c&apos; to &apos;emboss.c&apos;" description="Rename resource &apos;emboos.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/emboos.c" name="emboss.c" stamp="1418215916299" updateReferences="true"/>
+</session>
